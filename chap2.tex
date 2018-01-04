@@ -13,7 +13,8 @@
 1.1節で示したとおり，コグニステップは数字を数えながら左右の足で交互にステップをする運動と同時に，一定間隔ごとの決められた数字で拍手をする認知課題を行う．文献\cite{認知症予防へ向けた運動コグニサイズ}では，拍手をする数字の間隔を変更することで認知課題の負荷を調整可能としている．
 
 \section{提案システムの概要}
-提案システムでは，身体動作の認識が可能なKinectを使用し，コグニステップの認知課題の拍手動作を検出する．検出した拍手動作を利用し，認知課題の正誤判定を行う．コグニステップ実施中は認知課題の正誤判定を集計し，コグニステップ終了後に正誤判定の集計結果から認知課題の正答率を算出し，データベースに蓄積する．提案システムの構成図を図\ref{fig:system}に示す．認知課題の視覚的フィードバックを行うため，Kinectに内蔵されるRGBカメラで参加者を撮影し，撮影した動画を参加者の正面にプロジェクタで投影する．プロジェクタの投影面には図\ref{fig:vm_init}の赤枠内に示すように，認知課題を個別に表示する．表示する認知課題の負荷はPC上の管理画面で変更可能である．図\ref{fig:db_init}にPC上の管理画面を示す．データベースに蓄積した認知課題の正答率をPC上の管理画面で参照し，認知課題の正答率に応じて認知課題の負荷を個別に調整する．次節以降にそれぞれの処理について述べる．
+提案システムでは，身体動作の認識が可能なKinectを使用し，認知課題の拍手動作を検出する．検出した拍手動作を利用し，認知課題の正誤判定を行う．認知課題の正誤判定をコグニステップ実施中に集計し，コグニステップ終了後に集計結果から認知課題の正答率を算出する．算出した認知課題の正答率はデータベースに蓄積する．提案システムの構成図を図\ref{fig:system}に示す．認知課題の視覚的フィードバックを行うために，Kinectに内蔵されるRGBカメラで参加者を撮影し，撮影した動画を参加者の正面にプロジェクタで投影する．プロジェクタ投影面には図\ref{fig:projection_surface}で示すように，認知課題を個別に表示する．表示する認知課題はPC上の管理画面で個別に変更可能である．図\ref{fig:system_management}にPC上の管理画面を示す．データベースに蓄積した認知課題の正答率を図\ref{fig:check_answer_rate}で示すPC上の管理画面で参照し，認知課題の正答率に応じて認知課題を個別に変更する．参加者がプロジェクタ投影面に表示される認知課題のコグニステップを実施することで，認知課題の負荷を個別に調整する支援とする．次節以降にそれぞれの処理について述べる．
+
 
 \begin{figure}[tbp]
 	\centering
@@ -34,15 +35,22 @@
 \begin{figure}[tbp]
 	\centering
 			\includegraphics[width=0.9\textwidth]{chap2-figure/vm_init.eps}
-	\caption{プロジェクタ投影面}
-	\label{fig:vm_init}
+	\caption{プロジェクタ投影面（赤枠内が認知課題）}
+	\label{fig:projection_surface}
 \end{figure}
 
 \begin{figure}[tbp]
 	\centering
 			\includegraphics[width=0.9\textwidth]{chap2-figure/db_init.eps}
 	\caption{PC上のシステムの管理画面}
-	\label{fig:db_init}
+	\label{fig:system_management}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+			\includegraphics[width=0.9\textwidth]{chap2-figure/db_user_info.eps}
+	\caption{PC上のシステムの管理画面（赤枠内が認知課題の正答率）}
+	\label{fig:check_answer_rate}
 \end{figure}
 
 
@@ -79,6 +87,14 @@
 \fi
 
 \section{処理の流れ}
+提案システムの処理の流れについて述べる．処理の流れを図\ref{}に示す．
+
+
+\if0
+提案システムの処理の流れについて述べる．処理の流れを図\ref{fig:片桐2}に示す．
+提案システムの開始方法は，HMDをつなげたPCのマウスを左クリック又はキーボードのスペースキーで開始される．HMDに提示される開始画面を図\ref{fig:start}に示す．開始後，キャラクタの一人称視点の映像が提示され歩行が開始される．開始後の画面を図\ref{fig:gemestart}に示す．患者は設定時間が終了するまで下肢リハビリを続ける．設定した時間が終了すると，図\ref{fig:end}の画面が提示される．
+\fi
+
 
 \begin{figure}[tbp]
 	\centering
@@ -137,8 +153,6 @@
 \end{figure}
 
 \if0
-提案システムの処理の流れについて述べる．処理の流れを図\ref{fig:片桐2}に示す．
-提案システムの開始方法は，HMDをつなげたPCのマウスを左クリック又はキーボードのスペースキーで開始される．HMDに提示される開始画面を図\ref{fig:start}に示す．開始後，キャラクタの一人称視点の映像が提示され歩行が開始される．開始後の画面を図\ref{fig:gemestart}に示す．患者は設定時間が終了するまで下肢リハビリを続ける．設定した時間が終了すると，図\ref{fig:end}の画面が提示される．
 \begin{figure}[tbp]
 	\centering
 			\includegraphics[width=0.3\textwidth]{chap2-figure/katagiri2.eps}
