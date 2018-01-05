@@ -55,7 +55,7 @@
 
 
 \section{処理の流れ}
-提案システムの処理の流れについて述べる．処理の流れを図\ref{fig:system_flow}に示す．提案システムでは，コグニステップを実施する前に，PC上の管理画面で認知課題の設定を行う．認知課題の設定方法は，参加者が初めて提案システムを使用する場合と，二回目以降に使用する場合で異なるため，それぞれ2.3.1節，2.3.2節で述べる．認知課題の設定の完了後，図\ref{fig:db_start}に示すPC上の管理画面内の開始ボタンをクリックする．開始ボタンをクリックすると，図\ref{fig:vm_start}に示すように
+提案システムの処理の流れについて述べる．処理の流れを図\ref{fig:system_flow}に示す．提案システムでは，コグニステップを実施する前に，PC上の管理画面で認知課題の設定を行う．認知課題の設定方法は，参加者が初めて提案システムを使用する場合と，二回目以降に使用する場合で異なるため，それぞれ2.4節で述べる．認知課題の設定の完了後，図\ref{fig:db_start}に示すPC上の管理画面内の開始ボタンをクリックし，コグニステップを開始する．コグニステップの開始後，図\ref{fig:vm_active}に示すように，プロジェクタ投影面に表示する数字が毎秒ごとにカウントされる．参加者はカウントされる数字に合わせて，コグニステップを実施する．　
 
 \begin{figure}[tbp]
 	\centering
@@ -67,21 +67,31 @@
 \begin{figure}[tbp]
 	\centering
 			\includegraphics[width=0.9\textwidth]{chap2-figure/db_init.eps}
-	\caption{PC上の管理画面内の開始ボタン（赤枠内をクリックする）}
+	\caption{PC上の管理画面内の開始ボタン（赤枠内のボタンをクリックする）}
 	\label{fig:db_start}
 \end{figure}
 
+\begin{figure}[tbp]
+	\centering
+			\includegraphics[width=0.9\textwidth]{chap2-figure/vm_active.eps}
+	\caption{プロジェクタ投影面（赤枠内が毎秒ごとにカウントされる数字）}
+	\label{fig:vm_active}
+\end{figure}
+
+\if0
 \begin{figure}[tbp]
 	\centering
 			\includegraphics[width=0.9\textwidth]{chap2-figure/vm_start.eps}
 	\caption{プロジェクタ投影面（コグニステップの開始）}
 	\label{fig:vm_start}
 \end{figure}
+\fi
 
-\subsection{参加者が初めて提案システムを使用する場合の認知課題の設定方法}
+\section{認知課題の設定方法}
+\subsection{参加者が初めて提案システムを使用する場合}
 参加者が初めて提案システムを使用する場合の認知課題の設定方法について述べる．まず，図\ref{fig:db_regist_new_user}に示す参加者登録画面で，参加者の名前と年齢をデータベースに登録する．次に，図\ref{fig:db_select_user}に示す参加者の選択画面で，データベースに登録した参加者を選択する．図\ref{fig:system_management}に示す認知課題の設定画面で，認知課題の変更が可能であるが，参加者が初めて提案システムを使用する場合は，初期設定の認知課題でコグニステップを実施する．
 
-\subsection{参加者が二回目以降に提案システムを使用する場合の認知課題の設定方法}
+\subsection{参加者が二回目以降に提案システムを使用する場合}
 参加者が二回目以降に提案システムを使用する場合の処理の流れを述べる．まず，PC上の管理画面で認知課題の設定を行う．
 
 
