@@ -42,7 +42,7 @@
 \begin{figure}[tbp]
 	\centering
 			\includegraphics[width=0.9\textwidth]{chap2-figure/db_init.eps}
-	\caption{PC上のシステムの管理画面}
+	\caption{PC上のシステムの管理画面（赤枠内で認知課題の変更が可能）}
 	\label{fig:system_management}
 \end{figure}
 
@@ -54,46 +54,35 @@
 \end{figure}
 
 
-\if0
-提案システムでは，ベッド型の下肢リハビリ装置の下肢可動部にKinectV2\cite{KinectV2}を置き，歩行の検出を行う．KinectV2を図\ref{fig:kinect}に示す．KinectV2をセンサとして使用する．提案システムの歩行の検出にKinectV2を使用したシステム構成を図\ref{fig:beforesystemarc}に示す．ベッド型の下肢リハビリ装置の下肢部分の手前にKinectV2を設置する．処理の流れを図\ref{fig:片桐1}に示す．KinectV2からの取得した映像を二値化行い，図\ref{fig:kinectsystemarc}に示す，ベッド型の下肢リハビリ装置の下肢可動部の検出を行う．図\ref{fig:kinectsystemarc}に示す矩形の重心点の座標を取得し閾値を設定し，歩行判定を行う．歩行判定を基にキャラクタは歩行動作を行う．
-
-\begin{figure}[tbp]
-	\centering
-			\includegraphics[width=0.8\textwidth,angle = 270]{chap2-figure/kinect.eps}
-	\caption{KinectV2}
-	\label{fig:kinect}
-\end{figure}
-
-\begin{figure}[tbp]
-	\centering
-			\includegraphics[width=0.8\textwidth]{chap2-figure/beforesystem.eps}
-	\caption{KinectV2を使用したシステム構成図}
-	\label{fig:beforesystemarc}
-\end{figure}
-
-\begin{figure}[tbp]
-	\centering
-			\includegraphics[width=0.3\textwidth]{chap2-figure/katagiri1.eps}
-	\caption{処理の流れ}
-	\label{fig:片桐1}
-\end{figure}
-
-\begin{figure}[tbp]
-	\centering
-			\includegraphics[width=0.8\textwidth]{chap2-figure/kinectsystem.eps}
-	\caption{KinectV2の検出画像}
-	\label{fig:kinectsystemarc}
-\end{figure}
-\fi
-
 \section{処理の流れ}
-提案システムの処理の流れについて述べる．提案システムの処理の流れは，参加者が初めて提案システムを使用する場合と，二回目以降に使用する場合で異なる．
+提案システムの処理の流れについて述べる．処理の流れを図\ref{fig:system_flow}に示す．提案システムでは，コグニステップを実施する前に，PC上の管理画面で認知課題の設定を行う．認知課題の設定方法は，参加者が初めて提案システムを使用する場合と，二回目以降に使用する場合で異なるため，それぞれ2.3.1節，2.3.2節で述べる．認知課題の設定の完了後，図\ref{fig:db_start}に示すPC上の管理画面内の開始ボタンをクリックする．開始ボタンをクリックすると，図\ref{fig:vm_start}に示すように
 
-\subsection{参加者が初めて提案システムを使用する場合}
-参加者が初めて提案システムを使用する場合の処理の流れを述べる．
+\begin{figure}[tbp]
+	\centering
+			\includegraphics[width=0.7\textwidth]{chap2-figure/system_flow.eps}
+	\caption{処理の流れ}
+	\label{fig:system_flow}
+\end{figure}
 
-\subsection{参加者が二回目以降に提案システムを使用する場合}
-参加者が二回目以降に提案システムを使用する場合の処理の流れを述べる．
+\begin{figure}[tbp]
+	\centering
+			\includegraphics[width=0.9\textwidth]{chap2-figure/db_init.eps}
+	\caption{PC上の管理画面内の開始ボタン（赤枠内をクリックする）}
+	\label{fig:db_start}
+\end{figure}
+
+\begin{figure}[tbp]
+	\centering
+			\includegraphics[width=0.9\textwidth]{chap2-figure/vm_start.eps}
+	\caption{プロジェクタ投影面（コグニステップの開始）}
+	\label{fig:vm_start}
+\end{figure}
+
+\subsection{参加者が初めて提案システムを使用する場合の認知課題の設定方法}
+参加者が初めて提案システムを使用する場合の認知課題の設定方法について述べる．まず，図\ref{fig:db_regist_new_user}に示す参加者登録画面で，参加者の名前と年齢をデータベースに登録する．次に，図\ref{fig:db_select_user}に示す参加者の選択画面で，データベースに登録した参加者を選択する．図\ref{fig:system_management}に示す認知課題の設定画面で，認知課題の変更が可能であるが，参加者が初めて提案システムを使用する場合は，初期設定の認知課題でコグニステップを実施する．
+
+\subsection{参加者が二回目以降に提案システムを使用する場合の認知課題の設定方法}
+参加者が二回目以降に提案システムを使用する場合の処理の流れを述べる．まず，PC上の管理画面で認知課題の設定を行う．
 
 
 \if0
@@ -103,31 +92,27 @@
 
 \begin{figure}[tbp]
 	\centering
-			\includegraphics[width=0.9\textwidth]{chap2-figure/db_management_user.eps}
-	\caption{参加者の管理画面}
-	\label{fig:db_management_user}
-\end{figure}
-
-\begin{figure}[tbp]
-	\centering
 			\includegraphics[width=0.9\textwidth]{chap2-figure/db_regist_new_user.eps}
-	\caption{新規参加者の登録画面}
+	\caption{参加者登録画面（赤枠内に参加者の名前と年齢の入力）}
 	\label{fig:db_regist_new_user}
 \end{figure}
 
 \begin{figure}[tbp]
 	\centering
 			\includegraphics[width=0.9\textwidth]{chap2-figure/db_select_user.eps}
-	\caption{参加者の選択画面}
+	\caption{参加者の選択画面（赤枠内の選択ボタンをクリックする）}
 	\label{fig:db_select_user}
 \end{figure}
 
+\if0
 \begin{figure}[tbp]
 	\centering
-			\includegraphics[width=0.9\textwidth]{chap2-figure/vm_start.eps}
-	\caption{プロジェクタ投影面（開始時）}
-	\label{fig:vm_start}
+			\includegraphics[width=0.9\textwidth]{chap2-figure/db_management_user.eps}
+	\caption{参加者の管理画面}
+	\label{fig:db_management_user}
 \end{figure}
+\fi
+
 
 \begin{figure}[tbp]
 	\centering
@@ -145,47 +130,11 @@
 
 \begin{figure}[tbp]
 	\centering
-			\includegraphics[width=0.9\textwidth]{chap2-figure/db_user_info.eps}
-	\caption{参加者情報画面}
-	\label{fig:db_user_info}
-\end{figure}
-
-\begin{figure}[tbp]
-	\centering
 			\includegraphics[width=0.7\textwidth]{chap2-figure/skelton_position.eps}
 	\caption{Skeleton positions relative to the human body}
 	\label{fig:skelton_position}
 \end{figure}
 
-\if0
-\begin{figure}[tbp]
-	\centering
-			\includegraphics[width=0.3\textwidth]{chap2-figure/katagiri2.eps}
-	\caption{処理の流れ}
-	\label{fig:片桐2}
-\end{figure}
-
-\begin{figure}[tbp]
-	\centering
-			\includegraphics[width=0.9\textwidth]{chap2-figure/start.eps}
-	\caption{スタート画面}
-	\label{fig:start}
-\end{figure}
-
-\begin{figure}[tbp]
-	\centering
-			\includegraphics[width=0.9\textwidth]{chap2-figure/midstream-1.eps}
-	\caption{開始後画面}
-	\label{fig:gemestart}
-\end{figure}
-
-\begin{figure}[tbp]
-	\centering
-			\includegraphics[width=0.9\textwidth]{chap2-figure/end.eps}
-	\caption{終了画面}
-	\label{fig:end}
-\end{figure}
-\fi
 
 \if0
 \subsection{歩行距離の設定}
