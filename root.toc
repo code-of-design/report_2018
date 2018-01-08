@@ -8,8 +8,9 @@
 \contentsline {subsection}{\numberline {2.1.1}コグニステップ}{11}
 \contentsline {section}{\numberline {2.2}提案システムの概要}{11}
 \contentsline {section}{\numberline {2.3}処理の流れ}{11}
-\contentsline {section}{\numberline {2.4}認知課題の設定方法}{16}
-\contentsline {subsection}{\numberline {2.4.1}参加者が初めて提案システムを使用する場合}{16}
-\contentsline {subsection}{\numberline {2.4.2}参加者が二回目以降に提案システムを使用する場合}{16}
-\contentsline {section}{\numberline {2.5}むすび}{16}
-\contentsline {chapter}{\numberline {}参考文献}{19}
+\contentsline {section}{\numberline {2.4}認知課題の設定方法}{14}
+\contentsline {subsection}{\numberline {2.4.1}参加者が初めて提案システムを使用する場合}{14}
+\contentsline {subsection}{\numberline {2.4.2}参加者が二回目以降に提案システムを使用する場合}{14}
+\contentsline {section}{\numberline {2.5}認知課題の正誤判定方法}{14}
+\contentsline {section}{\numberline {2.6}むすび}{14}
+\contentsline {chapter}{\numberline {}参考文献}{21}

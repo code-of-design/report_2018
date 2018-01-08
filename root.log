@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.9.29)  5 JAN 2018 12:55
+This is e-pTeX, Version 3.14159265-p3.7-160201-2.6 (utf8.euc) (TeX Live 2016) (preloaded format=platex 2016.9.29)  8 JAN 2018 10:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -196,7 +196,7 @@ File: chap2-figure/db_init.eps Graphic file (type eps)
 
 <chap2-figure/db_init.eps>
 File: chap2-figure/db_user_info.eps Graphic file (type eps)
- <chap2-figure/db_user_info.eps>
+ <chap2-figure/db_user_info.eps> [11] [12] [13]
 File: chap2-figure/system_flow.eps Graphic file (type eps)
 
 <chap2-figure/system_flow.eps>
@@ -204,33 +204,34 @@ File: chap2-figure/db_init.eps Graphic file (type eps)
  <chap2-figure/db_init.eps>
 File: chap2-figure/vm_active.eps Graphic file (type eps)
 
-<chap2-figure/vm_active.eps> [11] [12] [13] [14] [15]
+<chap2-figure/vm_active.eps>
 File: chap2-figure/db_regist_new_user.eps Graphic file (type eps)
-
-<chap2-figure/db_regist_new_user.eps>
+ <chap2-figure/db_regist_new_user.eps>
 File: chap2-figure/db_select_user.eps Graphic file (type eps)
- <chap2-figure/db_select_user.eps>
+
+<chap2-figure/db_select_user.eps>
 File: chap2-figure/vm_clap.eps Graphic file (type eps)
-
-<chap2-figure/vm_clap.eps>
+ <chap2-figure/vm_clap.eps>
 File: chap2-figure/vm_answer_rate.eps Graphic file (type eps)
- <chap2-figure/vm_answer_rate.eps>
-File: chap2-figure/skelton_position.eps Graphic file (type eps)
 
-<chap2-figure/skelton_position.eps>) [16] [17] [18]
+<chap2-figure/vm_answer_rate.eps>
+File: chap2-figure/skelton_position.eps Graphic file (type eps)
+ <chap2-figure/skelton_position.eps>) [14]
+[15] [16] [17] [18] [19]
 \openout2 = `reference.aux'.
 
- (./reference.tex
+ (./reference.tex [20
+
+
+
+]
 Underfull \hbox (badness 6110) in paragraph at lines 31--32
 []\JY1/mc/m/n/10 国立長寿医療研究センタ ー\OT1/cmr/m/n/10 : $\OT1/cmtt/m/n/10 h
 ttp : / / www . ncgg . go . jp / cgss / department / cre / cognicise .
  []
 
-) [19
-
-
-
-] (./root.aux (./title.aux) (./chap1.aux) (./chap2.aux) (./reference.aux)) ) 
+) [21] (./root.aux (./title.aux) (./chap1.aux) (./chap2.aux) (./reference.aux))
+ ) 
 Here is how much of TeX's memory you used:
  1189 strings out of 493693
  14682 string characters out of 6149787
@@ -240,4 +241,4 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  25i,6n,26p,1363b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on root.dvi (19 pages, 26644 bytes).
+Output written on root.dvi (21 pages, 28072 bytes).
